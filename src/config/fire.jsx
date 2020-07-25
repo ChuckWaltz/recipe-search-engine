@@ -1,14 +1,14 @@
 import firebase from "firebase";
 
 // Initialize Firebase
-const config = {
-  apiKey: process.env.REACT_APP_RECIPE_SEARCH_ENGINE_FIREBASE_APIKEY,
-  authDomain: process.env.REACT_APP_RECIPE_SEARCH_ENGINE_FIREBASE_AUTHDOMAIN,
-  databaseURL: process.env.REACT_APP_RECIPE_SEARCH_ENGINE_FIREBASE_DATABASEURL,
-  projectId: process.env.REACT_APP_RECIPE_SEARCH_ENGINE_FIREBASE_PROJECTID,
-  storageBucket:
-    process.env.REACT_APP_RECIPE_SEARCH_ENGINE_FIREBASE_STORAGEBUCKET,
-  messagingSenderId: process.env.REACT_APP_RECIPE_SEARCH_ENGINE_CLIENTID
+var config = {
+  apiKey: "AIzaSyA1gBHUqU4HsLnpycHiLcwhhlRpL_pFl6A",
+  authDomain: "what-to-make.firebaseapp.com",
+  databaseURL: "https://what-to-make.firebaseio.com",
+  projectId: "what-to-make",
+  storageBucket: "what-to-make.appspot.com",
+  messagingSenderId: "131116482191",
+  appId: "1:131116482191:web:d7d881cc0fc2c9976cbafa",
 };
 const fire = firebase.initializeApp(config);
 
