@@ -27,11 +27,9 @@ class SearchBar extends Component {
           <button
             className="searchButton"
             onClick={() => onSearch()}
-            onMouseEnter={this.handleHover}
-            onMouseLeave={this.handleHover}
           >
-            <div className="hvr-pulse searchIconContainer">
-              <FontAwesomeIcon icon="search" className="hvr-pulse searchIcon" />
+            <div className="searchIconContainer">
+              <FontAwesomeIcon icon="search" className="searchIcon" />
             </div>
           </button>
         </Grid>

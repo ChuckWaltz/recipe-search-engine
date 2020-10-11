@@ -46,6 +46,21 @@ class SearchComponent extends Component {
 
     //Create the ingredients query from the current state.ingredientsList
     let ingredientsString = [];
+
+    //Check if anything is in the searchbar and add if so
+    let searchBarEl = document.getElementById("searchBar");
+    let searchVal = searchBarEl.value;
+    searchBarEl.value = "";
+
+    if(searchVal){
+      const ingredientsList = [...this.state.ingredientsList]; //Clone ingredients list
+      ingredientsList.push({
+        id: ingredientsList.length + 1,
+        value: searchVal.trim().replace(",", "") //Clean up value
+      }); //Add ingredient to list
+      this.setState({ ingredientsList }); // Set state
+    }
+
     this.state.ingredientsList.forEach(ingr => {
       ingredientsString.push(ingr.value);
     });
