@@ -1,6 +1,17 @@
 import React, { Component } from "react";
 import { Grid, FormGroup, FormControlLabel, Checkbox } from "@material-ui/core";
 
+const styles = {
+  filterContainer: {
+    margin: "auto",
+  },
+  filter: {
+    width: "50%",
+    maxWidth: "200px",
+    margin: 0,
+  },
+};
+
 class SearchFilters extends Component {
   render() {
     const { onCheckFilter, onCheckDiet } = this.props;
@@ -8,8 +19,8 @@ class SearchFilters extends Component {
     return (
       <Grid container className="searchFiltersWrapper">
         <Grid container className="searchFiltersContainer" justify="center">
-          <FormGroup row>
-            {this.props.filters.map(filter => (
+          <FormGroup row style={{ ...styles.filterContainer }}>
+            {this.props.filters.map((filter) => (
               <FormControlLabel
                 key={this.props.filters.indexOf(filter)}
                 control={
@@ -25,13 +36,10 @@ class SearchFilters extends Component {
                   />
                 }
                 label={filter.name}
+                style={{ ...styles.filter }}
               />
             ))}
-          </FormGroup>
-        </Grid>
-        <Grid container className="searchFiltersContainer" justify="center">
-          <FormGroup row>
-            {this.props.diets.map(diet => (
+            {this.props.diets.map((diet) => (
               <FormControlLabel
                 key={this.props.diets.indexOf(diet)}
                 control={
@@ -47,6 +55,7 @@ class SearchFilters extends Component {
                   />
                 }
                 label={diet.name}
+                style={{ ...styles.filter }}
               />
             ))}
           </FormGroup>
