@@ -1,4 +1,4 @@
-import firebase from "firebase";
+import { initializeApp } from "firebase/app";
 
 // Initialize Firebase
 var config = {
@@ -10,6 +10,6 @@ var config = {
   messagingSenderId: "131116482191",
   appId: "1:131116482191:web:d7d881cc0fc2c9976cbafa",
 };
-const fire = firebase.initializeApp(config);
+const fire = initializeApp(config);
 
 export default fire;
